@@ -1,0 +1,33 @@
+.manager{
+    margin-top: 50px;
+    border: 1px solid;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.manager thead{
+    display:block;
+}
+.manager thead th{
+    background-color: rgb(83, 231, 83);
+    width: 246px;
+}
+.manager tbody{
+    height: 400px;
+    display:block;
+    overflow: scroll;
+    overflow:auto;
+    background-color:white;
+}
+.manager tbody td{
+    width: 300px;
+    text-align: center;
+}
+.manager td, .manager th {
+    border: 1px solid;
+    height: 20px;
+    padding: 8px;
+  }
+.manager tbody tr:hover{
+    background-color: darkgoldenrod;
+}
