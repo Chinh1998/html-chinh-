@@ -1,0 +1,57 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background-image: url('regis.jpg');
+    background-size: cover;
+    background-position: top;
+}
+.register{
+    margin-top: 1%;
+    width: 35%;
+    padding: 2% 0 2% 3%;
+    box-sizing: border-box;
+    float: right;
+}
+
+.regis{
+    margin: 20px;
+    box-shadow:0 2px 3px 0px rgb(2, 2, 2);
+    border-radius: 10px;
+}
+
+.register input{
+    height: 40px;
+    margin-top: 30px;
+    font-size: 20px;  
+    color: rgb(255, 255, 255);
+    padding-left: 5%;
+    border: none;
+    border-bottom: 1px solid;
+    font-size: 18px;
+    outline: none;
+    background: transparent;
+}
+
+.regis-btn{
+    text-align: center;
+    width: 160px;
+    color: rgb(255, 0, 0);
+    margin-left:30px;
+    margin-bottom: 15px;
+    background-color: rgb(34, 5, 5);
+    cursor: pointer;
+}
+.regis-btn:hover{
+    background: rgb(52, 91, 100);
+}
+label.error{
+    color: rgb(170, 9, 9);
+    font-size: 12px;
+    display: block;
+}
+::-webkit-input-placeholder {
+    color:rgb(255, 255, 255);
+    font-size: 15px;
+}

@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .wrapper{
@@ -11,15 +12,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(138, 231, 200);
+    background-image: url('Laptop-Stock.jpeg');
 }
 .login{
-    padding: 2%;
-    width: 300px;
-    height: 320px;
+    padding: 1% 0 3% 3%;
+    width: 350px;
+    height: auto;
     border-radius: 7px;
     box-shadow: 0 2px 3px 0px rgb(68, 68, 68);
-    background-color: white;
 }
 .login .logo{
     width: 80px;
@@ -34,19 +34,44 @@
     color: rgb(245, 7, 59);
 }
 .login-input{
+    background:transparent;
+    color: white;
     height: 45px;
     font-size: 18px;
-    font-weight: bold;
-    border-radius: 4px;
-    padding-left: 5px;
-    background-color: rgb(205, 228, 228);
+    border-radius: 25px;
+    padding-left: 5%;
+    box-shadow:0 2px 3px 0px rgb(32, 29, 29);
+    border: none;
+    outline: none;
 }
 .login-button{
-    background-color: rgb(247, 14, 26);
-    width: 100%;
+    background-color:  rgb(28, 172, 172);
+    width: 100px;
     height: 40px;
     font-size: 20px;
-    border-radius: 10px;
-    float: right;
-    display: block;
+    color: rgb(49, 39, 39);
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
 }
+.login-button:hover{
+    background-color: rgb(168, 131, 116);
+}
+.re-register{
+    background-color: rgb(141, 74, 74);
+    height: 40px;
+    width: 150px;
+    float: left;
+    text-align: center;
+    line-height: 40px;
+    border-radius:20px;
+    font-size: 20px;
+}
+.re-register:hover{
+    background-color: rgb(47, 38, 58);
+}
+.re-register a{
+    text-decoration: none;
+    color: tomato;
+}
+::-webkit-input-placeholder {color:yellow;}
