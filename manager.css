@@ -10,7 +10,7 @@
     background-color: rgb(83, 177, 231);
 }
 .manager thead th{
-    background-color: rgb(83, 177, 231);
+    background-color: rgb(83, 231, 83);
     height: 45px;
     position: sticky;
     top: 0;
@@ -19,11 +19,14 @@
 .manager{
     height: 400px;
     display:block;
-    overflow: scroll;
     overflow:auto;
     background-color:white;
     box-shadow:0 2px 3px 0px rgb(32, 29, 29);
     border-radius: 15px;
+}
+.manager tbody{
+    overflow: scroll;
+
 }
 .manager td{
     width: 300px;

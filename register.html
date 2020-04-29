@@ -4,63 +4,37 @@
   <meta charset="utf-8">
   <title>Example</title>
   <link rel="stylesheet" type="text/css" href="register.css">
-  <script type="text/javascript" src="jquery-3.5.0.min.js"></script>
-  <script type="text/javascript" src="jquery.validate.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function(){
-        $("#form-regis").validate({
-            rules: {
-                firstname: {
-                    required: true,
-                },
-                lastname: {
-                    required: true,
-                },
-                email:{
-                    required: true,
-                    email: true,
-                },
-                phone: {
-                    required: true,
-                    number: true,
-                    minlength:10,
-                    maxlength:11,
-                },
-            },
-            messages: {
-                firstname: {
-                    required: "Enter firstname",
-                },
-                lastname: {
-                    required: "Enter lastname",
-                },
-                email:{
-                    required: "Enter email",
-                    email: "example: chinh198@gail.com"
-                },
-                phone: {
-                    required: "Enter phone",
-                    number: "Enter number",
-                    minlength:"Enter a 10 or 11-digit phone number",
-                    maxlength:"Enter a 10 or 11-digit phone number",
-                }
-            },
-        
-        });
-    });
-    </script>
+  <script type="text/javascript" src="register.js"></script>
+  <script type="text/javascript" src="verify.js"></script>
 </head>
 <body>
-    <div class="register">
-        <form method="post"  id="form-regis" action="verify.html">
-            <div class="regis">
-                <input type="text" placeholder="firstname" name="firstname" size="30" >
-                <input type="text" placeholder="lastname" name="lastname" size="30" >
-                <input type="text" placeholder="email" name="email" size="30" >
-                <input type="text" placeholder="phone" name="phone" size="30" >
-                <input type="submit" class="regis-btn" value="REGISTER"/>
-            </div>
-    </form>
+    <div class="wrapper" id="wrapper">
+        <div class="register">
+            <form id="form-regis" >
+                <div class="regis">
+                    <input type="text" placeholder="firstname"  id="firstname" onkeyup="checkFirstname()">
+                    <label id="checkFirstname"></label>
+                    <input type="text" placeholder="lastname"  id="lastname" onkeyup="checkLastname()">
+                    <label id="checkLastname"></label>
+                    <input type="text" placeholder="email"  id="email" onkeyup="checkMail(this.value)">
+                    <label id="checkMail"></label>
+                    <input type="text" placeholder="phone"  id="phone" onkeyup="checkPhone(this.value)">
+                    <label id="checkPhone"></label>
+                    <button type="button" id="btn-regis"  onclick="openPopup()" class="regis-btn">REGISTER</button>
+                </div>
+            </form>
+        </div>
+        <div class="verify" id="myPopup">
+            <form action="login.html">
+                <input type="text" tabindex="1" maxlength="1"  onkeyup="foCus(this,this.value)"/>
+                <input type="text" tabindex="2" maxlength="1" onkeyup="foCus(this,this.value)"/>
+                <input type="text" tabindex="3" maxlength="1" onkeyup="foCus(this,this.value)"/>
+                <input type="text" tabindex="4" maxlength="1" onkeyup="foCus(this,this.value)"/>
+                <input type="text" tabindex="5" maxlength="1" onkeyup="foCus(this,this.value)"/>
+                <input type="text" tabindex="6" maxlength="1" onkeyup="foCus(this,this.value)"/>
+                <button type="submit" class="btn-verify" id="verify" disabled="true" >Verify</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
