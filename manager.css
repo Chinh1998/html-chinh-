@@ -1,7 +1,7 @@
 .manager{
     margin-top: 50px;
     border-collapse: collapse;
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     padding: 0;
 }
@@ -24,10 +24,18 @@
     box-shadow:0 2px 3px 0px rgb(32, 29, 29);
     border-radius: 15px;
 }
-.manager tbody{
-    overflow: scroll;
 
+#scroll-1::-webkit-scrollbar {
+    width: 6px;
+    background-color: rgb(250, 246, 246);
+} 
+#scroll-1::-webkit-scrollbar-thumb {
+    width: 3px;
+    border-radius: 15px;
+    background-color: #000000;
 }
+
+
 .manager td{
     width: 300px;
     text-align: center;

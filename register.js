@@ -1,4 +1,4 @@
-function openPopup(){
+let openPopup=()=>{
     let firstname=document.getElementById('firstname').value;
     if(firstname==''){
         document.getElementById('checkFirstname').innerHTML='Enter firstname'
@@ -15,7 +15,7 @@ function openPopup(){
     if(phone==''){
         document.getElementById('checkPhone').innerHTML='Enter phone'
     }
-    if(this.checkFirstname(firstname) == true && this.checkLastname(lastname) == true 
+    if(checkFirstname(firstname) == true && this.checkLastname(lastname) == true 
         && this.checkMail(email)== true && this.checkPhone(phone)==true){
         document.getElementById("myPopup").style.display='block';
         document.getElementById("form-regis").style.opacity=0.5;
@@ -23,7 +23,7 @@ function openPopup(){
     }
 }
 
-function checkFirstname(value){
+let checkFirstname=(value)=>{
     if(value!=''){
         document.getElementById('checkFirstname').innerHTML ='ok'
 
