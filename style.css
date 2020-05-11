@@ -39,6 +39,7 @@
 .login-input{
     background:transparent;
     color: white;
+    width: 95%;
     height: 45px;
     font-size: 18px;
     margin-top: 30px;
@@ -80,5 +81,11 @@
 .re-register a{
     text-decoration: none;
     color: rgb(7, 7, 7);
+}
+
+.login-face{
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
 }
 ::-webkit-input-placeholder {color:yellow;}

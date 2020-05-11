@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Example</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="myscript.js"></script>
+</head>
+<body>
+  <script>
+    window.fbAsyncInit = async function() {
+      await FB.init({
+        appId      : '324989548467049',
+        cookie     : true,
+        xfbml      : true,
+        version    : 'v2.9'
+      });
+        
+      
+        FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+        });  
+        
+    };
+  
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "https://connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+
+     function statusChangeCallback(response){
+         if(response.status==='connected'){
+             window.location ='manager.html';
+         }else{
+             console.log('Not loggin');
+         }
+     }
+
+     
+    function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+    });
+    }
+  </script>
+  <div class="wrapper">
+    <div class="login">
+        <img class="logo" src="./loho.png" />
+        <div class="login-face">
+            <fb:login-button 
+              scope="public_profile,email"
+              onlogin="checkLoginState();"> Log In With Facebook
+            </fb:login-button>
+        </div> 
+        <form class="form">
+          <label id="err-lb" style="color: red;"></label>
+            <input class="login-input" type="text" id="username" placeholder="username"  size="25" name="username">
+            <input class="login-input" id="password" type="password" placeholder="password"  size="25" name="password">
+              <div class="btn-form">
+                <div class="re-register"><a  href="register.html">REGISTER</a></div>
+                <input type="button" class="login-button" onclick="login()" value="LOGIN">
+            </div>
+        </form>
+    </div>
+  </div>
+</body>
+</html>
